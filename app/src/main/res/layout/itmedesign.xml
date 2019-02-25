@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre: "
+        android:id="@+id/txtnombre"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:id="@+id/setxt"
+        android:layout_toRightOf="@+id/txtnombre"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad: "
+        android:id="@+id/txtedad"
+        android:layout_below="@id/txtnombre" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad"
+        android:id="@+id/setedad"
+        android:layout_toRightOf="@id/txtedad"
+        android:layout_below="@id/txtnombre"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido: "
+        android:id="@+id/txtapellido"
+        android:layout_below="@id/txtedad"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        android:id="@+id/setApellido"
+        android:layout_toRightOf="@+id/txtapellido"
+        android:layout_below="@+id/txtedad"/>
+
+
+</RelativeLayout>
