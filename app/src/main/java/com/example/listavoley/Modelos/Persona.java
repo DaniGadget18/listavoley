@@ -3,9 +3,9 @@ package com.example.listavoley.Modelos;
 public class Persona {
 
     private Integer id;
-    private String nombre;
-    private String apellido;
-    private Integer edad;
+    private String Nombre;
+    private String Apellido;
+    private Integer Edad;
 
     public Integer getId() {
         return id;
@@ -16,26 +16,26 @@ public class Persona {
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        Nombre = nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        Apellido = apellido;
     }
 
     public Integer getEdad() {
-        return edad;
+        return Edad;
     }
 
     public void setEdad(Integer edad) {
-        this.edad = edad;
+        Edad = edad;
     }
 }

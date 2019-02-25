@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.example.listavoley.Modelos.Persona;
 import com.example.listavoley.R;
@@ -12,12 +13,13 @@ import com.example.listavoley.R;
 import java.util.List;
 
 public class AdaptadorPersona extends BaseAdapter {
-    List<Persona> lp;
-    Context c;
+    private List<Persona> lp;
+    private Context c;
+    private View convertView;
 
-    Public AdaptadorPersona(List<Persona> lp, Context c){
+    public AdaptadorPersona(Context context, List<Persona> lp){
         this.lp = lp;
-        this.c = c;
+        this.c = context;
     }
 
     @Override
@@ -36,11 +38,18 @@ public class AdaptadorPersona extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int position, View ConvertView, ViewGroup viewGroup) {
         LayoutInflater li = LayoutInflater.from(c);
-        convertView = li.inflate(R.layout.item,null);
+        convertView = (View) li.inflate(R.layout.itmedesign,null);
         Persona p = (Persona)getItem(position);
+        TextView txtnombre = (TextView) convertView.findViewById(R.id.setxt);
+        TextView txtedad = (TextView) convertView.findViewById(R.id.setedad);
+        TextView txtapellido = (TextView) convertView.findViewById(R.id.setApellido);
+        txtnombre.setText(p.getNombre());
+        txtapellido.setText(p.getApellido());
+        txtedad.setText(String.valueOf(p.getEdad()));
 
-        return
+        return  convertView;
+
     }
 }
